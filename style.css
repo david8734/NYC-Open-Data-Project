@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(148, 147, 147);
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: darkblue;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.side {
+    flex: 1;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid gray;
+}
+
+.main {
+    flex: 3;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid gray;
+}
+
+.side h3,
+.main h2 {
+    margin-top: 0;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+}
+
+.filter-item {
+    margin-bottom: 16px;
+}
+
+.filter-item label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.filter-buttons button {
+    margin-right: 0;
+}
+
+#output {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+button {
+    border: none;
+    background-color: darkblue;
+    color: white;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 15px;
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+#analysisList ol {
+    padding-left: 18px;
+}
+
+#analysisList li {
+    margin-bottom: 10px;
+}
+
+#chartContainer,
+#mapContainer {
+    margin-top: 20px;
+}
+
+#analysisChart {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+.chart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.chart-column-bar {
+    width: 100%;
+    max-width: 100%;
+    background-color: #1f77b4;
+    border-radius: 4px;
+}
+
+.chart-column-label {
+    font-size: 0.9em;
+    line-height: 1.2;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.chart-column-value {
+    display: block;
+    font-size: 0.9em;
+    color: #333;
+}
+
+#mapContainer iframe {
+    border: 1px solid #ccc;
+}
+
+.message {
+    background-color: #fff4cc;
+    border: 1px solid #ffecb3;
+    padding: 10px;
+    margin-top: 10px;
+}

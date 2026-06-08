@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 7.6 Demonstration</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="c3-eb4b9be8.css" rel="stylesheet" type="text/css" />
+    <script src="d3-5.8.2.min-c5268e33.js"></script>
+    <script src="c3.min-d2a1f852.js"></script>
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+   </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1> Aggregating Information for Charts </h1>
+      </div>
+    </div>
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="filter.html">Filter</a>
+  <a href="analysis.html">Analysis</a>
+</nav>
+    <div class="container subbanner">
+      <div>
+        <p>This page shows a chart for the leading causes of death in New York City. We use data from the NYC Open Data set and add together all the deaths for each cause. The chart helps us compare different causes using simple bars or slices. When the chart is built, each cause appears with a number that shows how many deaths were reported.</p>
+       </div>
+    </div>
+    <div class="container">
+      <p>The chart area shows the top causes of death and the total death count for each cause. It puts each cause on the chart using the total number of deaths, so the bigger values are easy to see. That means you can compare causes and see which ones are higher or lower. The chart is built from data rows, and each row adds to the total for one cause. When you look at the chart, you can understand the size of each cause at a glance. This explanation helps make the page easier to understand for someone learning how charts use data. The chart can use different shapes like a bar, a pie, or a donut, but the data is the same. Each shape shows the total death number for each cause in a simple way. This page is meant to teach how raw numbers become a picture on the screen. You can read the explanation first, then use the controls to see the chart appear with the same numbers as the data.</p>
+    </div>
+    <div class="container">
+      <p><span class="highlight">Scenario:</span>Chart analyzes the highest total deaths by cause.</p>
+      <select id="chartType" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="ByBorough()"> Display </a>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+       
+
+    
+    </div>
+    <div class="container subbanner"><br></div>
+    <div id="output"></div>
+    
+    <div id="footer" class="container center">
+      <h3>Final Project</h3>
+    </div>  
+  </body>
+</html>

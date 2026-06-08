@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter NYC Death Data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadData()">
+
+<div class="container">
+    <h1>Filter NYC Death Data</h1>
+    <p>Search the dataset and display matching records as cards.</p>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="filter.html" class="active">Filter</a>
+    <a href="analysis.html">Analysis</a>
+</nav>
+
+<div class="content">
+    <div class="side">
+        <h2>Filters</h2>
+        
+        <div class="filter-item">
+            <label>Cause of Death</label>
+            <select id="causeSelect">
+                <option value="">-- All Causes --</option>
+            </select>
+        </div>
+
+        <div class="filter-item">
+            <label>Race/Ethnicity</label>
+            <select id="raceSelect">
+                <option value="">-- All Races --</option>
+            </select>
+        </div>
+
+        <div class="filter-item">
+            <label>Gender</label>
+            <select id="genderSelect">
+                <option value="">-- All Genders --</option>
+            </select>
+        </div>
+
+        <div class="filter-buttons">
+            <button onclick="filterData()">Search</button>
+            <button onclick="showAll()">Show All</button>
+        </div>
+        
+        <div id="result" class="result-text"></div>
+    </div>
+
+    <div class="main" id="output">
+        <p>Loading data...</p>
+    </div>
+</div>
+
+<div class="container">
+    <h1>NYC Open Data Project</h1>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
