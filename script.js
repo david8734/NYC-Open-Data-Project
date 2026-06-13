@@ -13,18 +13,15 @@ function loadData() {
       data = records;
 
       fillDropdown();
-      showAll();
+      displayData();
 
     });
 
 }
 
 function fillDropdown() {
-
   let build = `<option value=''>-- Select Cause --</option>`;
-
   for (let i = 0; i < data.length; i++) {
-
     build += `<option value='${data[i].leading_cause}'>
                 ${data[i].leading_cause}
               </option>`;
@@ -32,18 +29,14 @@ function fillDropdown() {
   }
 
   document.getElementById("causeSelect").innerHTML = build;
-
   fillRaceDropdown();
   fillGenderDropdown();
 
 }
 
 function fillRaceDropdown() {
-
   let races = [];
-
   for (let i = 0; i < data.length; i++) {
-
     let raceExists = false;
 
     for (let j = 0; j < races.length; j++) {
@@ -59,7 +52,6 @@ function fillRaceDropdown() {
   }
 
   let build = `<option value=''>-- Select Race --</option>`;
-
   for (let i = 0; i < races.length; i++) {
     build += `<option value='${races[i]}'>
                 ${races[i]}
@@ -71,7 +63,6 @@ function fillRaceDropdown() {
 }
 
 function fillGenderDropdown() {
-
   let build = `<option value=''>-- Select Gender --</option>`;
   build += `<option value='Male'>Male</option>`;
   build += `<option value='Female'>Female</option>`;
@@ -80,10 +71,8 @@ function fillGenderDropdown() {
 
 }
 
-function showAll() {
-
+function displayData() {
   showRecords(data);
-
   document.getElementById("result").innerHTML =
     `${data.length} Results Found`;
 
@@ -162,9 +151,7 @@ function init() {
 function ByBorough() {
 
   let chartType = document.getElementById("chartType").value;
-
   let columns = [];
-  
   let count = 0;
 
   for (let i = 0; i < data.length && count < 6; i++) {
